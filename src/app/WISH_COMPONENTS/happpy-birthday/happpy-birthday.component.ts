@@ -25,6 +25,8 @@ export class HapppyBirthdayComponent implements OnInit {
   procced_to(){
     if(this.isToggled){
       this.router.navigate(["/LoveYouToo"])
+    }else{
+      
     }
   }
 }

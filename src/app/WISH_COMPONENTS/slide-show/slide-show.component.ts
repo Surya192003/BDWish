@@ -8,7 +8,10 @@ import { Router } from '@angular/router';
 export class SlideShowComponent implements OnInit {
   constructor( public router : Router ) { }
   ngOnInit(): void {
-   this.router.navigate(["/MissYouToo"])
+    setTimeout(() => {
+      this.router.navigate(["/MissYouToo"])
+    }, 5000);
+
   }
   heart : string = "<3"
 }
