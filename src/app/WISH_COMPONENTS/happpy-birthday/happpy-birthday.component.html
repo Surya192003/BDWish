@@ -1,0 +1,16 @@
+<div style="z-index: 2;">
+    <div class="toogle_whole_container">
+        <div class="toggle-container" (click)="toggle()">
+            <div class="toggle-switch" [ngClass]="{ 'on': isToggled }">
+                <span class="switch-text">{{ isToggled ? '🥳' : '🥲' }}</span>
+            </div>
+        </div>
+        {{text_shown}}
+    </div>
+    <div class="happy-birthday-container">
+        <div class="wishes_spacing">
+            <h1 [ngClass]="{ 'active_text': isToggled }" class="happy-birthday-text">HAPPY BIRTHDAY MY LOVE</h1>
+        </div>
+    </div>
+    <div [ngClass]="{ 'active_text': isToggled }"  class="proceed_button_placement" >{{proceed_text}}</div>
+</div>
