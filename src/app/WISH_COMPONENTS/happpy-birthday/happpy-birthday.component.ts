@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-happpy-birthday',
   templateUrl: './happpy-birthday.component.html',
   styleUrls: ['./happpy-birthday.component.css']
 })
 export class HapppyBirthdayComponent implements OnInit {
-  constructor() { }
+  constructor( public router : Router ) { }
   text_shown : string = "You Dont Love Me 🥲"
   proceed_text : string = "You Should Love Me To Proceed 😁"
   ngOnInit(): void {
@@ -20,6 +20,11 @@ export class HapppyBirthdayComponent implements OnInit {
     }else{
       this.text_shown = "You Dont Love Me 🥲"
       this.proceed_text = "You Should Love Me To Proceed 😁"
+    }
+  }
+  procced_to(){
+    if(this.isToggled){
+      this.router.navigate(["/LoveYouToo"])
     }
   }
 }

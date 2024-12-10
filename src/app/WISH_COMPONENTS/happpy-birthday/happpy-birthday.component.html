@@ -12,5 +12,5 @@
             <h1 [ngClass]="{ 'active_text': isToggled }" class="happy-birthday-text">HAPPY BIRTHDAY MY LOVE</h1>
         </div>
     </div>
-    <div [ngClass]="{ 'active_text': isToggled }"  class="proceed_button_placement" >{{proceed_text}}</div>
+    <div [ngClass]="{ 'active_text': isToggled }"  class="proceed_button_placement" (click)="procced_to()" >{{proceed_text}}</div>
 </div>
